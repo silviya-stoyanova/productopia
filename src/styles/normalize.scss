@@ -1,0 +1,46 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.container {
+  margin: 0 $spacing-sm;
+  padding: 0 $spacing-sm;
+
+  @include tablet {
+    margin: 0 $spacing-xl;
+    padding: 0 $spacing-xl;
+  }
+
+  @include desktop {
+    margin: 0 $spacing-xxl;
+    padding: 0 $spacing-xxl;
+  }
+}

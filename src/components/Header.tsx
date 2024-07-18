@@ -1,13 +1,13 @@
 import React from "react";
-import Logo from "./Logo";
 import Navigation from "./Navigation";
+
+import "../styles/components/header.scss";
 
 const Header: React.FC = () => {
   return (
-    <>
-      <Logo />
+    <header className="header container">
       <Navigation />
-    </>
+    </header>
   );
 };
 

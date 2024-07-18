@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../../styles/components/common/link.scss";
+
 interface ILink {
   key: string;
   href: string;
@@ -9,7 +11,7 @@ interface ILink {
 const Link: React.FC<ILink> = ({ key, href, name }) => {
   return (
     <li key={key}>
-      <a href={href}>{name}</a>
+      <a href={href} className="link">{name}</a>
     </li>
   );
 };

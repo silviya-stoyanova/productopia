@@ -1,0 +1,52 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, min-content);
+  row-gap: $spacing-xl;
+  //   margin-top: $spacing-xl;
+  //   margin-bottom: $spacing-xl;
+  //   background: url("https://cdn.ozone.bg/media/description/9/2/920ac0319b1b581639ca6ca36cc8bdba4e389e3d_3000x2500_3047.jpg")
+  //     no-repeat right/contain;
+
+  @include mobile-large {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: $font-size-24;
+
+    @include tablet {
+      font-size: $font-size-48;
+    }
+  }
+
+  &__description {
+    grid-row: 2;
+    font-size: $font-size-16;
+  }
+
+  &__image-container {
+    grid-column: 1;
+    max-width: 300px;
+    align-self: center;
+    justify-self: center;
+
+    @include mobile-large {
+      grid-column: 2;
+      grid-row: span 2;
+    }
+
+    @include tablet {
+        justify-self: end;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
