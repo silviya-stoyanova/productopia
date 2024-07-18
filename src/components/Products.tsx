@@ -10,9 +10,12 @@ const Products: React.FC = () => {
   return (
     <section className="products">
       <section className="container">
-        {products.map((product) => (
-          <Card product={product}></Card>
-        ))}
+        <h2 className="products__title">Our Products</h2>
+        <article className="cards">
+          {products.map((product) => (
+            <Card key={product.id} product={product}></Card>
+          ))}
+        </article>
       </section>
     </section>
   );

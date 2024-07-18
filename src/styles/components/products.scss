@@ -1,7 +1,19 @@
 @import "../colors.scss";
+@import "../mixins.scss";
 @import "../variables.scss";
 
 .products {
-  padding-top: $spacing-xl;
+  margin-top: $spacing-xl;
+  padding: $spacing-xl 0;
   background: $grey-color-100;
+
+  &__title {
+    font-weight: 400;
+    font-size: $font-size-24;
+    padding-bottom: $spacing-xl;
+
+    @include tablet {
+      font-size: $font-size-32;
+    }
+  }
 }

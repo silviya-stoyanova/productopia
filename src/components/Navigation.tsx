@@ -14,20 +14,20 @@ const Navigation: React.FC = () => {
 
   const navLinks: INavigationLink[] = [
     {
-      name: "All",
+      name: "Home",
       href: "/",
     },
     {
-      name: "Software",
-      href: "/software",
+      name: "Shop",
+      href: "/shop",
     },
     {
-      name: "Mobile Devices",
-      href: "/mobile-devices",
+      name: "Support",
+      href: "/support",
     },
     {
-      name: "Fashion",
-      href: "/fashion",
+      name: "About Us",
+      href: "/about-us",
     },
   ];
 
@@ -36,7 +36,7 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className="navigation">
+    <nav className="navigation container">
       <Logo />
       <label
         htmlFor="mobile-navigation"

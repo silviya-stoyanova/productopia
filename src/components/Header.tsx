@@ -5,7 +5,7 @@ import "../styles/components/header.scss";
 
 const Header: React.FC = () => {
   return (
-    <header className="header container">
+    <header className="header">
       <Navigation />
     </header>
   );

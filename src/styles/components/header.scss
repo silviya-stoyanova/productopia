@@ -1,4 +1,7 @@
+@import "../colors.scss";
 @import "../variables.scss";
 
 .header {
+  padding: $spacing-md 0;
+  background: $grey-color-100;
 }

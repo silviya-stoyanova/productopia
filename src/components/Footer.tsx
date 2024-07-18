@@ -5,7 +5,10 @@ import "../styles/components/footer.scss";
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      © 2024 - ProductOpia - All Rights Reserved
+      <article className="container">
+        © 2024 - ProductOpia - All Rights Reserved | Developed by Silviya
+        Stoyanova
+      </article>
     </footer>
   );
 };

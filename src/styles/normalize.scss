@@ -26,6 +26,10 @@ a {
   min-height: 100vh;
 }
 
+.main {
+  margin-top: $spacing-md;
+}
+
 .footer {
   margin-top: auto;
 }
@@ -42,5 +46,15 @@ a {
   @include desktop {
     margin: 0 $spacing-xxl;
     padding: 0 $spacing-xxl;
+  }
+
+  @include desktop-large {
+    margin: 0 $spacing-xxxl;
+    padding: 0 $spacing-xxxl;
+  }
+
+  @include desktop-extra-large {
+    margin: 0 $spacing-xxxxl;
+    padding: 0 $spacing-xxxxl;
   }
 }

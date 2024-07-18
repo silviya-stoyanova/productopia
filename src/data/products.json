@@ -54,7 +54,7 @@
   {
     "id": "5",
     "category": "Software",
-    "name": "Database Manager Pro",
+    "name": "Database Manager",
     "description": "Efficient database management software for enterprises.",
     "image": "https://picsum.photos/700/500",
     "price": 299.99,
@@ -67,7 +67,7 @@
   {
     "id": "6",
     "category": "Software",
-    "name": "Project Management Tool",
+    "name": "Project Management",
     "description": "Streamline your projects with advanced management features.",
     "image": "https://picsum.photos/550/350",
     "price": 199.99,
