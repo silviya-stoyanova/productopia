@@ -43,7 +43,7 @@
     "category": "Software",
     "name": "Code Editor X",
     "description": "A powerful code editor with advanced features for developers.",
-    "image": "https://picsum.photos/850/300",
+    "image": "https://picsum.photos/850/520",
     "price": 59.99,
     "features": {
       "operatingSystem": "Windows, macOS, Linux",
@@ -69,7 +69,7 @@
     "category": "Software",
     "name": "Project Management",
     "description": "Streamline your projects with advanced management features.",
-    "image": "https://picsum.photos/930/350",
+    "image": "https://picsum.photos/930/440",
     "price": 199.99,
     "features": {
       "operatingSystem": "Windows, macOS, Linux",
@@ -142,7 +142,7 @@
     "category": "Mobile Devices",
     "name": "Portable Charger 20k",
     "description": "High-capacity portable charger with fast charging.",
-    "image": "https://picsum.photos/780/300",
+    "image": "https://picsum.photos/780/520",
     "price": 49.99,
     "features": {
       "battery": "20000mAh",

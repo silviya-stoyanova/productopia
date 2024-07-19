@@ -5,7 +5,6 @@ import Banner from "./components/Banner";
 import Products from "./components/Products";
 import productsData from "./data/products.json";
 
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./styles/index.scss";
 
 export enum Category {

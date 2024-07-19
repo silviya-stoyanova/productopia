@@ -28,6 +28,16 @@
     background: $grey-color-100;
     border-radius: $border-radius-8;
 
+    @include tablet {
+      top: 10px;
+      right: 10px;
+    }
+
+    @include desktop {
+      top: 24px;
+      right: 24px;
+    }
+
     &-item {
       min-width: 100%;
       min-height: 3px;
@@ -53,16 +63,19 @@
     animation: dialog-content-expand-mobile 0.5s ease-out forwards;
 
     @include tablet {
+      display: flex;
+      align-items: center;
       margin: auto;
       max-width: 700px;
-      max-height: 500px;
-      padding: $spacing-xxl;
+      max-height: 550px;
+      padding: $spacing-lg;
       border-radius: $border-radius-8;
       animation: dialog-content-expand-desktop 0.5s ease-out forwards;
     }
 
     @include desktop {
       max-width: 900px;
+      padding: $spacing-xxl;
     }
 
     &--closing {

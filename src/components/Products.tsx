@@ -12,7 +12,7 @@ const Products: React.FC = () => {
     null
   );
 
-  
+
   const showMoreProducts = () => {
     setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 6);
   };

@@ -6,11 +6,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, min-content);
   row-gap: $spacing-xl;
-  //   margin-top: $spacing-xl;
-  //   margin-bottom: $spacing-xl;
-  //   background: url("https://cdn.ozone.bg/media/description/9/2/920ac0319b1b581639ca6ca36cc8bdba4e389e3d_3000x2500_3047.jpg")
-  //     no-repeat right/contain;
-
+ 
   @include mobile-large {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, min-content);
