@@ -4,6 +4,7 @@
 
 .filters {
   display: flex;
+  flex-wrap: wrap;
   gap: $spacing-md;
   align-items: center;
   padding-bottom: $spacing-xl;
