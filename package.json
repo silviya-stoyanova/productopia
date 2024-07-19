@@ -2,6 +2,10 @@
   "name": "productopia",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Silviya Stoyanova",
+    "url": "https://www.linkedin.com/in/silviya-stoyanova"
+  },
   "dependencies": {
     "@types/node": "^16.18.102",
     "@types/react": "^18.3.3",

@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Category, IProduct } from "../types/productTypes";
 import { ProductsContext } from "../App";
+import SkeletonCard from "./common/SkeletonCard";
 import ProductDetails from "./ProductDetails";
+import Skeleton from "./common/Skeleton";
+import Filters from "./common/Filters";
 import Card from "./common/Card";
 
 import "../assets/styles/components/products.scss";
-import Filters from "./common/Filters";
-import SkeletonCard from "./common/SkeletonCard";
-import Skeleton from "./common/Skeleton";
 
 const Products: React.FC = () => {
   const { products, loadingProducts, error } = useContext(ProductsContext);
@@ -16,7 +16,6 @@ const Products: React.FC = () => {
     null
   );
   const [selectedCategories, setSelectedCategories] = useState<Category[]>([]);
-
 
   const showMoreProducts = () => {
     setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 6);
@@ -49,6 +48,13 @@ const Products: React.FC = () => {
           selectedItems={selectedCategories}
           onFilterChange={handleFilterChange}
         />
+        {error && (
+          <p className="products__error">
+            Something went wrong while fetching products. Please try again
+            later.
+          </p>
+        )}
+
         <article className="cards">
           {loadingProducts
             ? Array.from({ length: visibleProducts }).map((value, index) => (

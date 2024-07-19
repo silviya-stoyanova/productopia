@@ -17,6 +17,10 @@
     }
   }
 
+  &__error {
+    color: $red-color-500;
+  }
+
   &__show-more-button {
     font-size: $font-size-18;
     padding: $spacing-sm $spacing-md;

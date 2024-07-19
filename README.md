@@ -1,46 +1,57 @@
 # ProductOpia
 
-Web app for exploring a diverse catalog of products.
+This is a React and TypeScript based product management application that includes features for displaying products, filtering them by categories, and handling product details. It also simulates loading times for testing purposes.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+1. Clone the Repository: Start by cloning the repository and navigating to the project directory.
+2. Install Dependencies: Run `npm install` to install all necessary dependencies.
+3. Run the Application: Run `npm start` to view the application in your browser.
 
-### `npm start`
+## Technical Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React**: JavaScript library for building user interfaces
+- **TypeScript**: Superset of JavaScript with added typing
+- **SCSS**: CSS preprocessor with superpowers
+- **Font Awesome**: Awesome UI icons
+- **Fetch API**: For making HTTP requests
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## App description
 
-### `npm test`
+### Categories
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application includes products in the following categories:
 
-### `npm run build`
+- **Software**: Software-related products with specific features
+- **Mobile Devices**: Products related to mobile technology
+- **Fashion**: Clothes and accessories
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Fetching Products
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application retrieves product data from a JSON file. The `fetchProducts` function handles fetching and processing this data, ensuring it is correctly formatted and mapped. Any errors during the fetch process are also handled.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### User Interaction
 
-### `npm run eject`
+#### Product Cards
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Initial Display**: Initially, the application displays 6 product cards on the screen.
+- **Card Click**: Clicking on a card, opens a dialog with detailed information about the selected product. This dialog provides additional insights into the product's features, image, and description.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Show More Button
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Show More**: Clicking the "Show More" button reveals 6 additional product cards. This button dynamically loads more items as the user interacts with it.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Loading Skeletons
 
-## Learn More
+To enhance the user experience while the data is being fetched, on the screen are rendered loading indicators.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Card Skeletons**: Animated placeholders rendered while the product cards are loading. They mimic the structure of the cards, but with a skeleton layout.
+- **Filter Skeletons**: Rendered until product details are fetched in order to prevent user interaction with the filters.
+- **Show More Button Skeleton**: Appears until the product details are fully loaded. Its purpose is to prevent loading more cards on the screen during loading time.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Filters Component
+
+The `Filters` component allows users to filter the products by categories. It supports:
+
+- **Multiple Selections**: Users can select and apply multiple filters simultaneously
+- **Filter Removal**: Clicking on an applied filter removes it and updates the displayed products accordingly
