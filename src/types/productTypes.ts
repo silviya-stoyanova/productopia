@@ -24,11 +24,6 @@ export interface IFashionFeatures {
   material: string;
 }
 
-// export type ProductFeatures =
-//   | ISoftwareFeatures
-//   | IMobileDevicesFeatures
-//   | IFashionFeatures;
-
 export interface IBaseProduct {
   id: string;
   name: string;

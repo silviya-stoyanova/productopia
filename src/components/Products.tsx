@@ -1,11 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Category, IProduct, IProductData } from "../types/productTypes";
+import { Category, IProduct } from "../types/productTypes";
 import { ProductsContext } from "../App";
 import ProductDetails from "./ProductDetails";
 import Card from "./common/Card";
 
 import "../assets/styles/components/products.scss";
 import Filters from "./common/Filters";
+import SkeletonCard from "./common/SkeletonCard";
+import Skeleton from "./common/Skeleton";
 
 const Products: React.FC = () => {
   const { products, loadingProducts, error } = useContext(ProductsContext);
@@ -48,18 +50,25 @@ const Products: React.FC = () => {
           onFilterChange={handleFilterChange}
         />
         <article className="cards">
-          {filteredProducts.slice(0, visibleProducts).map((product) => (
-            <Card
-              key={product.id}
-              item={product}
-              onClick={() => setSelectedProductId(product.id)}
-            ></Card>
-          ))}
+          {loadingProducts
+            ? Array.from({ length: visibleProducts }).map((value, index) => (
+                <SkeletonCard key={index} />
+              ))
+            : filteredProducts
+                .slice(0, visibleProducts)
+                .map((product) => (
+                  <Card
+                    key={product.id}
+                    item={product}
+                    onClick={() => setSelectedProductId(product.id)}
+                  />
+                ))}
         </article>
+        {loadingProducts && <Skeleton />}
         {visibleProducts < products.length && (
           <button
-            className="products__show-more-button"
             onClick={showMoreProducts}
+            className="products__show-more-button"
           >
             Show more
           </button>

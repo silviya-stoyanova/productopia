@@ -1,0 +1,9 @@
+@import "../../placeholders.scss";
+@import "../../variables.scss";
+
+.skeleton {
+  @extend %loading-styles;
+  border-radius: $border-radius-8;
+  width: 100px;
+  height: 30px;
+}

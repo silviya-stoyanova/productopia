@@ -1,0 +1,7 @@
+@import "./colors.scss";
+
+%loading-styles {
+  background: $linear-background;
+  background-size: 200% 100%;
+  animation: 1s shine linear infinite;
+}

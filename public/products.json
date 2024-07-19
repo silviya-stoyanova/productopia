@@ -244,5 +244,18 @@
       "color": "Black, White, Gray",
       "material": "Cotton Blend"
     }
+  },
+  {
+    "id": "19",
+    "category": "Fashion",
+    "name": "T-Shirt",
+    "description": "Comfortable t-shirt for the summer.",
+    "image": "https://picsum.photos/1930/1500",
+    "price": 29.99,
+    "features": {
+      "size": "S, M, L, XL, XXL",
+      "color": "White, Black, Blue, Green, Gray",
+      "material": "Cotton"
+    }
   }
 ]

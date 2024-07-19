@@ -1,6 +1,7 @@
 import { Category, IProduct } from "../types/productTypes";
 
 export const fetchProducts = async (): Promise<IProduct[]> => {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const response = await fetch("products.json");
 
   if (!response.ok) {
