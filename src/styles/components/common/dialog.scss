@@ -1,0 +1,76 @@
+@import "../animations.scss";
+@import "../../colors.scss";
+@import "../../mixins.scss";
+@import "../../variables.scss";
+
+.dialog {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  position: fixed;
+  background: $grey-overlay;
+  animation: dialog-overlay-in 0.5s linear;
+
+  &--closing {
+    animation: dialog-overlay-out 0.5s linear;
+  }
+
+  &__content-close-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    padding: $spacing-xs;
+    background: $grey-color-100;
+    border-radius: $border-radius-8;
+
+    &-item {
+      min-width: 100%;
+      min-height: 3px;
+      display: inline-block;
+      background: $grey-color-400;
+      border-radius: $border-radius-8;
+
+      &:nth-child(1) {
+        transform: translateY(-1px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translateY(-18px) rotate(-45deg);
+      }
+    }
+  }
+
+  &__content {
+    overflow-y: auto;
+    position: absolute;
+    background: $white;
+    padding: $spacing-sm;
+    animation: dialog-content-expand-mobile 0.5s ease-out forwards;
+
+    @include tablet {
+      margin: auto;
+      max-width: 700px;
+      max-height: 500px;
+      padding: $spacing-xxl;
+      border-radius: $border-radius-8;
+      animation: dialog-content-expand-desktop 0.5s ease-out forwards;
+    }
+
+    @include desktop {
+      max-width: 900px;
+    }
+
+    &--closing {
+      animation: dialog-content-collapse-mobile 0.5s ease-out forwards;
+
+      @include tablet {
+        animation: dialog-content-collapse-desktop 0.5s ease-out forwards;
+      }
+    }
+  }
+}

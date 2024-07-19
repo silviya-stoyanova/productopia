@@ -59,7 +59,9 @@ const Navigation: React.FC = () => {
       ></input>
       <ul className="navigation__list">
         {navLinks.map((data) => (
-          <Link key={data.name} href={data.href} name={data.name} />
+          <li key={data.name} className="navigation__list-item">
+            <Link href={data.href} name={data.name} />
+          </li>
         ))}
       </ul>
     </nav>

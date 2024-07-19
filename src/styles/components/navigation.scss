@@ -4,6 +4,7 @@
 
 .navigation {
   display: grid;
+  gap: $spacing-md;
   align-items: center;
   justify-content: space-between;
   grid-template-columns: repeat(2, max-content);
@@ -11,12 +12,13 @@
 
   &__burger-label {
     width: 25px;
+    height: 20px;
     display: flex;
-    flex-direction: column;
-    gap: $spacing-xs;
     cursor: pointer;
-    flex: 0 0 auto;
+    gap: $spacing-xs;
     align-self: baseline;
+    flex-direction: column;
+    flex: 0 0 auto;
     margin-top: $spacing-sm;
 
     @include tablet {
@@ -66,17 +68,38 @@
 
   &__list {
     display: flex;
-    gap: $spacing-sm;
+    gap: $spacing-lg;
     flex-direction: column;
-    font-size: $font-size-16;
+    font-size: $font-size-18;
     grid-column: span 2;
+    margin-top: $spacing-md;
     // transition: opacity 0.3s, max-height 0.3s ease-in;
 
+    border-top: 1px solid $grey-color-200;
+    padding-top: $spacing-md;
+
     @include tablet {
-      gap: $spacing-xxl;
+      margin-top: 0;
+      border-top: 0;
+      padding-top: 0;
+      gap: $spacing-xl;
       flex-direction: row;
       grid-column: span 1;
       font-size: $font-size-24;
+    }
+
+    @include desktop {
+      gap: $spacing-xxl;
+    }
+
+    &-item {
+      padding: 0 0 $spacing-md $spacing-sm;
+      border-bottom: 1px solid $grey-color-200;
+
+      @include tablet {
+        padding: 0;
+        border-bottom: 0;
+      }
     }
   }
 }

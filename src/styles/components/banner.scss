@@ -18,6 +18,7 @@
 
   &__title {
     font-weight: 400;
+    align-self: flex-end;
     font-size: $font-size-32;
 
     @include tablet {
@@ -42,7 +43,7 @@
     }
 
     @include tablet {
-        justify-self: end;
+      justify-self: end;
     }
 
     img {

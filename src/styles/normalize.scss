@@ -20,6 +20,15 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+.body--opened-dialog {
+  overflow: hidden;
+}
+
 .root {
   display: flex;
   flex-direction: column;

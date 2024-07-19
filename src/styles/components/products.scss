@@ -4,7 +4,7 @@
 
 .products {
   margin-top: $spacing-xl;
-  padding: $spacing-xl 0;
+  padding: $spacing-xxl 0;
   background: $grey-color-100;
 
   &__title {
@@ -15,5 +15,13 @@
     @include tablet {
       font-size: $font-size-32;
     }
+  }
+
+  &__button {
+    margin: $spacing-xl 0 0;
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-18;
+    border: 1px solid $grey-color-500;
+    border-radius: $border-radius-32;
   }
 }

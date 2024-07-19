@@ -1,0 +1,77 @@
+@import "../mixins.scss";
+@import "../colors.scss";
+@import "../variables.scss";
+
+.product-details {
+  display: grid;
+  gap: $spacing-md;
+
+  @include tablet {
+    gap: $spacing-xl;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__image {
+    height: 400px;
+    overflow: hidden;
+    border-radius: $border-radius-8;
+
+    &-item {
+      width: 100%;
+      height: 100%;
+      object-fit: none;
+    }
+  }
+
+  &__content {
+    padding-top: $spacing-md;
+
+    &-name {
+      font-weight: 400;
+      font-size: $font-size-24;
+      padding-bottom: $spacing-xl;
+
+      @include tablet {
+        font-size: $font-size-32;
+      }
+    }
+
+    &-description {
+      color: $grey-color-400;
+      font-size: $font-size-16;
+      padding-bottom: $spacing-md;
+    }
+
+    &-price {
+      font-size: $font-size-16;
+      padding-bottom: $spacing-md;
+    }
+
+    &-category {
+      padding: $spacing-md 0;
+      font-size: $font-size-16;
+      border-top: 1px solid $grey-color-200;
+      border-bottom: 1px solid $grey-color-200;
+    }
+
+    &-features {
+      padding: $spacing-md 0;
+      font-size: $font-size-16;
+
+      &-title {
+        padding-bottom: $spacing-md;
+      }
+
+      &-list {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        color: $grey-color-400;
+
+        &-item {
+        }
+      }
+    }
+  }
+}

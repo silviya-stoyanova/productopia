@@ -5,15 +5,22 @@ import Banner from "./components/Banner";
 import Products from "./components/Products";
 import productsData from "./data/products.json";
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./styles/index.scss";
 
-interface ISoftwareFeatures {
+export enum Category {
+  Software = "Software",
+  MobileDevices = "Mobile Devices",
+  Fashion = "Fashion",
+}
+
+export interface ISoftwareFeatures {
   operatingSystem: string;
   license: string;
   support: string;
 }
 
-interface IMobileDevicesFeatures {
+export interface IMobileDevicesFeatures {
   battery: string;
   processor: string;
   camera: string;
@@ -21,26 +28,44 @@ interface IMobileDevicesFeatures {
   display: string;
 }
 
-interface IFashionFeatures {
+export interface IFashionFeatures {
   size: string;
   color: string;
   material: string;
 }
 
-type ProductFeatures =
-  | ISoftwareFeatures
-  | IMobileDevicesFeatures
-  | IFashionFeatures;
+// export type ProductFeatures =
+//   | ISoftwareFeatures
+//   | IMobileDevicesFeatures
+//   | IFashionFeatures;
 
-export interface IProduct {
+export interface IBaseProduct {
   id: string;
-  category: string;
   name: string;
   description: string;
   image: string;
   price: number;
-  features: ProductFeatures;
 }
+
+export interface ISoftwareProduct extends IBaseProduct {
+  category: Category.Software;
+  features: ISoftwareFeatures;
+}
+
+export interface IMobileDevicesProduct extends IBaseProduct {
+  category: Category.MobileDevices;
+  features: IMobileDevicesFeatures;
+}
+
+export interface IFashionProduct extends IBaseProduct {
+  category: Category.Fashion;
+  features: IFashionFeatures;
+}
+
+export type IProduct =
+  | ISoftwareProduct
+  | IMobileDevicesProduct
+  | IFashionProduct;
 
 export const ProductsContext: Context<IProduct[]> = createContext<IProduct[]>(
   []
@@ -50,7 +75,12 @@ const App: React.FC = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
-    setProducts(productsData);
+    const transformedProducts = productsData.map((product) => ({
+      ...product,
+      category: product.category as Category,
+    })) as IProduct[];
+
+    setProducts(transformedProducts);
   }, []);
 
   return (

@@ -1,0 +1,88 @@
+@import "../colors.scss";
+@import "../variables.scss";
+
+@keyframes dialog-overlay-in {
+  from {
+    background: transparent;
+  }
+  to {
+    background: $grey-overlay;
+  }
+}
+
+@keyframes dialog-overlay-out {
+  from {
+    background: $grey-overlay;
+  }
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes dialog-content-expand-mobile {
+  0% {
+    top: 50vw;
+    left: 50vw;
+    right: 50vw;
+    bottom: 50vh;
+    transform: scale(0) rotate(0);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(1) rotate(1080deg);
+  }
+}
+
+@keyframes dialog-content-expand-desktop {
+  0% {
+    top: 50vw;
+    left: 50vw;
+    right: 50vw;
+    bottom: 50vh;
+    transform: scale(0) rotate(0);
+  }
+  100% {
+    left: 0;
+    right: 0;
+    top: $spacing-xxl;
+    bottom: $spacing-xxl;
+    transform: scale(1) rotate(1080deg);
+  }
+}
+
+@keyframes dialog-content-collapse-mobile {
+  0% {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(1) rotate(1080deg);
+  }
+  100% {
+    top: 50vw;
+    left: 50vw;
+    right: 50vw;
+    bottom: 50vh;
+    transform: scale(0) rotate(0);
+  }
+}
+
+@keyframes dialog-content-collapse-desktop {
+  0% {
+    left: 0;
+    right: 0;
+    top: $spacing-xxl;
+    bottom: $spacing-xxl;
+    transform: scale(1) rotate(1080deg);
+  }
+  100% {
+    top: 50vw;
+    left: 50vw;
+    right: 50vw;
+    bottom: 50vh;
+    transform: scale(0) rotate(0);
+  }
+}

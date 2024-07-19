@@ -9,11 +9,9 @@ interface ILink {
 
 const Link: React.FC<ILink> = ({ href, name }) => {
   return (
-    <li key={name}>
-      <a href={href} className="link">
-        {name}
-      </a>
-    </li>
+    <a href={href} className="link">
+      {name}
+    </a>
   );
 };
 
