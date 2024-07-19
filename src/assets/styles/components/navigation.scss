@@ -42,50 +42,39 @@
     &-item {
       min-width: 100%;
       min-height: 3px;
-      background: $black;
-      border-radius: $border-radius-8;
+      background: $primary-color;
       transition: transform 0.3s;
+      border-radius: $border-radius-8;
     }
   }
 
   &__burger-input:checked + &__list {
-    // opacity: 1;
-    // max-height: 200px;
     display: flex;
   }
 
   &__burger-input:not(:checked) + &__list {
-    // opacity: 0;
-    // max-height: 0;
     display: none;
 
     @include tablet {
-      //   opacity: 1;
-      //   max-height: 200px;
       display: flex;
     }
   }
 
   &__list {
     display: flex;
-    gap: $spacing-lg;
     flex-direction: column;
     font-size: $font-size-18;
     grid-column: span 2;
     margin-top: $spacing-md;
-    // transition: opacity 0.3s, max-height 0.3s ease-in;
-
-    border-top: 1px solid $grey-color-200;
-    padding-top: $spacing-md;
+    border-top: 1px solid $purple-color-500;
 
     @include tablet {
       margin-top: 0;
       border-top: 0;
-      padding-top: 0;
-      gap: $spacing-xl;
+      gap: $spacing-md;
       flex-direction: row;
       grid-column: span 1;
-      font-size: $font-size-24;
+      font-size: $font-size-20;
     }
 
     @include desktop {
@@ -93,12 +82,38 @@
     }
 
     &-item {
-      padding: 0 0 $spacing-md $spacing-sm;
-      border-bottom: 1px solid $grey-color-200;
+      border-bottom: 1px solid $purple-color-500;
 
       @include tablet {
-        padding: 0;
         border-bottom: 0;
+      }
+
+      .link {
+        padding: $spacing-md $spacing-sm;
+
+        @include tablet {
+          position: relative;
+          padding: $spacing-sm;
+
+          &:after {
+            content: "";
+            height: 2px;
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0px;
+            background: $primary-color;
+            transform: scale(0);
+            transition: transform 0.3s;
+          }
+
+          &:hover {
+            &:after {
+              transform: scale(1);
+            }
+          }
+        }
       }
     }
   }

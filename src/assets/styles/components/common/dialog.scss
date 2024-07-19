@@ -30,6 +30,11 @@
     background: $grey-color-100;
     border-radius: $border-radius-8;
     padding: 7px $spacing-xs $spacing-xs;
+    transition: background 0.3s;
+
+    &:hover {
+      background: $purple-color-100;
+    }
 
     @include tablet {
       top: 10px;

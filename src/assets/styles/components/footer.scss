@@ -1,6 +1,9 @@
+@import "../colors.scss";
 @import "../variables.scss";
 
 .footer {
+  color: $grey-color-100;
   padding: $spacing-xxl 0;
   font-size: $font-size-16;
+  background: $purple-color-700;
 }

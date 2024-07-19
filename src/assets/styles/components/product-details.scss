@@ -94,13 +94,17 @@
           grid-template-columns: min-content 1fr;
 
           .fas {
-            color: $black;
+            color: $grey-color-500;
             padding-top: $spacing-xxs;
           }
 
-          &-value {
-            color: $grey-color-400;
-            padding-left: $spacing-xs;
+          &-text {
+            line-height: 1.2;
+
+            &-value {
+              color: $grey-color-400;
+              padding-left: $spacing-xs;
+            }
           }
         }
       }

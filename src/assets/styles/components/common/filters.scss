@@ -1,0 +1,40 @@
+@import "../../mixins.scss";
+@import "../../colors.scss";
+@import "../../variables.scss";
+
+.filters {
+  display: flex;
+  gap: $spacing-md;
+  align-items: center;
+  padding-bottom: $spacing-xl;
+
+  &__title {
+    color: $primary-color;
+  }
+
+  &__item {
+    display: flex;
+    gap: $spacing-sm;
+    padding: $spacing-sm;
+    font-size: $font-size-14;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: $border-radius-32;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $grey-color-100;
+      background: $primary-color;
+    }
+
+    &--selected {
+      color: $grey-color-100;
+      background: $primary-color;
+
+      &:hover {
+        color: $primary-color;
+        background: $grey-color-100;
+      }
+    }
+  }
+}

@@ -49,9 +49,10 @@ const ProductDetails: React.FC<IProductDetails> = ({ product, onClose }) => {
                   className="product-details__content-features-list-item"
                 >
                   <i className={getFeatureIcon(product.category, key)}></i>
-                  <p>
+                  <p className="product-details__content-features-list-item-text">
+                    {/* {`${camelCaseToReadable(key)}: ${value}`} */}
                     {camelCaseToReadable(key)}:
-                    <span className="product-details__content-features-list-item-value">
+                    <span className="product-details__content-features-list-item-text-value">
                       {value}
                     </span>
                   </p>
