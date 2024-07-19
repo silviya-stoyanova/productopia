@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../../styles/components/common/card.scss";
+import "../../assets/styles/components/common/card.scss";
 
 interface IItem {
   id: string;

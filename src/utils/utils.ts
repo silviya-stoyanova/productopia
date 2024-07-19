@@ -3,7 +3,7 @@ import {
   IFashionFeatures,
   IMobileDevicesFeatures,
   ISoftwareFeatures,
-} from "../App";
+} from "../types/productTypes";
 
 export const camelCaseToReadable = (str: string): string => {
   return str

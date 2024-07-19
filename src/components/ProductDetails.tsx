@@ -1,8 +1,9 @@
 import React from "react";
-import Dialog from "./common/Dialog";
-import "../styles/components/product-details.scss";
-import { IProduct } from "../App";
 import { camelCaseToReadable, getFeatureIcon } from "../utils/utils";
+import { IProduct } from "../types/productTypes";
+import Dialog from "./common/Dialog";
+
+import "../assets/styles/components/product-details.scss";
 
 interface IProductDetails {
   product: IProduct;
@@ -43,7 +44,10 @@ const ProductDetails: React.FC<IProductDetails> = ({ product, onClose }) => {
             </p>
             <ul className="product-details__content-features-list">
               {Object.entries(product.features).map(([key, value]) => (
-                <li className="product-details__content-features-list-item">
+                <li
+                  key={key}
+                  className="product-details__content-features-list-item"
+                >
                   <i className={getFeatureIcon(product.category, key)}></i>
                   <p>
                     {camelCaseToReadable(key)}:

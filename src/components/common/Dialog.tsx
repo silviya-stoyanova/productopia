@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/components/common/dialog.scss";
+import "../../assets/styles/components/common/dialog.scss";
 
 interface IDialog {
   onClose: () => void;
@@ -46,7 +46,11 @@ const Dialog: React.FC<IDialog> = ({ onClose, children }) => {
         }
         onClick={(e: React.MouseEvent<HTMLElement>) => e.stopPropagation()}
       >
-        <button className="dialog__content-close-button" title="Close" onClick={startCloseAnimation}>
+        <button
+          className="dialog__content-close-button"
+          title="Close"
+          onClick={startCloseAnimation}
+        >
           <span className="dialog__content-close-button-item"></span>
           <span className="dialog__content-close-button-item"></span>
         </button>

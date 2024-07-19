@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../../styles/components/common/link.scss";
+import "../../assets/styles/components/common/link.scss";
 
 interface ILink {
   href: string;

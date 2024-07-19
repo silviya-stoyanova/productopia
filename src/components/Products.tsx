@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
-import { IProduct, ProductsContext } from "../App";
+import { IProduct, IProductData } from "../types/productTypes";
+import { ProductsContext } from "../App";
+import ProductDetails from "./ProductDetails";
 import Card from "./common/Card";
 
-import "../styles/components/products.scss";
-import ProductDetails from "./ProductDetails";
+import "../assets/styles/components/products.scss";
 
 const Products: React.FC = () => {
-  const products: IProduct[] = useContext(ProductsContext);
+  const { products, loadingProducts, error } = useContext(ProductsContext);
   const [visibleProducts, setVisibleProducts] = useState<number>(6);
   const [selectedProductId, setSelectedProductId] = useState<string | null>(
     null
@@ -18,7 +19,7 @@ const Products: React.FC = () => {
   };
 
   const selectedProduct = products.find(
-    (product) => product.id === selectedProductId
+    (product: IProduct) => product.id === selectedProductId
   );
 
   return (

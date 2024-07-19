@@ -18,15 +18,18 @@
   }
 
   &__content-close-button {
+    display: flex;
+    gap: $spacing-xs;
+    flex-direction: column;
     position: absolute;
     top: 24px;
     right: 24px;
     width: 32px;
     height: 32px;
     border: none;
-    padding: $spacing-xs;
     background: $grey-color-100;
     border-radius: $border-radius-8;
+    padding: 7px $spacing-xs $spacing-xs;
 
     @include tablet {
       top: 10px;
@@ -46,11 +49,11 @@
       border-radius: $border-radius-8;
 
       &:nth-child(1) {
-        transform: translateY(-1px) rotate(45deg);
+        transform: translateY(7px) rotate(45deg);
       }
 
       &:nth-child(2) {
-        transform: translateY(-18px) rotate(-45deg);
+        transform: rotate(-45deg);
       }
     }
   }

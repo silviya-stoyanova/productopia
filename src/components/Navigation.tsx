@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import Link from "./common/Link";
 
-import "../styles/components/navigation.scss";
+import "../assets/styles/components/navigation.scss";
 
 interface INavigationLink {
   name: string;
