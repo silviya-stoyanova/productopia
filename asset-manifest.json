@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/productopia/static/css/main.f35a9652.css",
+    "main.js": "/productopia/static/js/main.ae9fac5b.js",
+    "static/media/product-opia.svg": "/productopia/static/media/product-opia.1b6ed35480480c2eebe5293521abf618.svg",
+    "index.html": "/productopia/index.html",
+    "main.f35a9652.css.map": "/productopia/static/css/main.f35a9652.css.map",
+    "main.ae9fac5b.js.map": "/productopia/static/js/main.ae9fac5b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f35a9652.css",
+    "static/js/main.ae9fac5b.js"
+  ]
+}
