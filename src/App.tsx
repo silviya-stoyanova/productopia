@@ -1,6 +1,6 @@
 import React, { Context, createContext } from "react";
-import { useProducts } from "./hooks/useProducts";
 import { IProductData } from "./types/productTypes";
+import { useProducts } from "./hooks/useProducts";
 import Products from "./components/Products";
 import Header from "./components/Header";
 import Footer from "./components/Footer";

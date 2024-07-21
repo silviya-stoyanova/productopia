@@ -10,60 +10,57 @@ interface IProductDetails {
   onClose: () => void;
 }
 
-const ProductDetails: React.FC<IProductDetails> = ({ product, onClose }) => {
-  return (
-    <Dialog onClose={onClose}>
-      <section className="product-details">
-        <article className="product-details__image">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="product-details__image-item"
-          />
+const ProductDetails: React.FC<IProductDetails> = ({ product, onClose }) => (
+  <Dialog onClose={onClose}>
+    <section className="product-details">
+      <article className="product-details__image">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="product-details__image-item"
+        />
+      </article>
+      <article className="product-details__content">
+        <h2 className="product-details__content-name">{product.name}</h2>
+        <p className="product-details__content-description">
+          {product.description}
+        </p>
+        <p className="product-details__content-price">
+          Price:
+          <span className="product-details__content-price-value">
+            ${product.price}
+          </span>
+        </p>
+        <p className="product-details__content-category">
+          Category:
+          <span className="product-details__content-category-value">
+            {product.category}
+          </span>
+        </p>
+        <article className="product-details__content-features">
+          <p className="product-details__content-features-title">
+            Specifications
+          </p>
+          <ul className="product-details__content-features-list">
+            {Object.entries(product.features).map(([key, value]) => (
+              <li
+                key={key}
+                className="product-details__content-features-list-item"
+              >
+                <i className={getFeatureIcon(product.category, key)}></i>
+                <p className="product-details__content-features-list-item-text">
+                  {camelCaseToReadable(key)}:
+                  <span className="product-details__content-features-list-item-text-value">
+                    {value}
+                  </span>
+                </p>
+              </li>
+            ))}
+          </ul>
         </article>
-        <article className="product-details__content">
-          <h2 className="product-details__content-name">{product.name}</h2>
-          <p className="product-details__content-description">
-            {product.description}
-          </p>
-          <p className="product-details__content-price">
-            Price:
-            <span className="product-details__content-price-value">
-              ${product.price}
-            </span>
-          </p>
-          <p className="product-details__content-category">
-            Category:
-            <span className="product-details__content-category-value">
-              {product.category}
-            </span>
-          </p>
-          <article className="product-details__content-features">
-            <p className="product-details__content-features-title">
-              Specifications
-            </p>
-            <ul className="product-details__content-features-list">
-              {Object.entries(product.features).map(([key, value]) => (
-                <li
-                  key={key}
-                  className="product-details__content-features-list-item"
-                >
-                  <i className={getFeatureIcon(product.category, key)}></i>
-                  <p className="product-details__content-features-list-item-text">
-                    {/* {`${camelCaseToReadable(key)}: ${value}`} */}
-                    {camelCaseToReadable(key)}:
-                    <span className="product-details__content-features-list-item-text-value">
-                      {value}
-                    </span>
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </article>
-        </article>
-      </section>
-    </Dialog>
-  );
-};
+      </article>
+    </section>
+  </Dialog>
+);
 
 export default ProductDetails;

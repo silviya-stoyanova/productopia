@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-
-import "../../assets/styles/components/common/filters.scss";
 import { ProductsContext } from "../../App";
 import Skeleton from "./Skeleton";
+
+import "../../assets/styles/components/common/filters.scss";
 
 interface FilterProps<T extends string> {
   items: T[];

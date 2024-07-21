@@ -29,13 +29,13 @@ const Products: React.FC = () => {
     );
   };
 
-  const selectedProduct = products.find(
-    (product: IProduct) => product.id === selectedProductId
-  );
-
   const filteredProducts = selectedFilters.length
     ? products.filter((product) => selectedFilters.includes(product.category))
     : products;
+
+  const selectedProduct = products.find(
+    (product: IProduct) => product.id === selectedProductId
+  );
 
   return (
     <section className="products">
