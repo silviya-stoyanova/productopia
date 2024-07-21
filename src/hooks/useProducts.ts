@@ -4,8 +4,8 @@ import { fetchProducts } from "../data/productService";
 
 export const useProducts = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
-  const [error, setError] = useState<string>("");
   const [loadingProducts, setLoadingProducts] = useState<boolean>(true);
+  const [error, setError] = useState<string>("");
 
   const loadProducts = async () => {
     fetchProducts()
