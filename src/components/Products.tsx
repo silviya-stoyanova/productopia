@@ -15,17 +15,17 @@ const Products: React.FC = () => {
   const [selectedProductId, setSelectedProductId] = useState<string | null>(
     null
   );
-  const [selectedCategories, setSelectedCategories] = useState<Category[]>([]);
+  const [selectedFilters, setSelectedFilters] = useState<Category[]>([]);
 
   const showMoreProducts = () => {
     setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 6);
   };
 
-  const handleFilterChange = (category: Category) => {
-    setSelectedCategories((prevSelectedCategories) =>
-      prevSelectedCategories.includes(category)
-        ? prevSelectedCategories.filter((cat) => cat !== category)
-        : [...prevSelectedCategories, category]
+  const handleFilterChange = (filter: Category) => {
+    setSelectedFilters((prevSelectedFilters) =>
+      prevSelectedFilters.includes(filter)
+        ? prevSelectedFilters.filter((prevFilter) => prevFilter !== filter)
+        : [...prevSelectedFilters, filter]
     );
   };
 
@@ -33,10 +33,8 @@ const Products: React.FC = () => {
     (product: IProduct) => product.id === selectedProductId
   );
 
-  const filteredProducts = selectedCategories.length
-    ? products.filter((product) =>
-        selectedCategories.includes(product.category)
-      )
+  const filteredProducts = selectedFilters.length
+    ? products.filter((product) => selectedFilters.includes(product.category))
     : products;
 
   return (
@@ -45,7 +43,7 @@ const Products: React.FC = () => {
         <h2 className="products__title">Our Products</h2>
         <Filters
           items={Object.values(Category)}
-          selectedItems={selectedCategories}
+          selectedItems={selectedFilters}
           onFilterChange={handleFilterChange}
         />
         {error && (
@@ -71,7 +69,7 @@ const Products: React.FC = () => {
                 ))}
         </article>
         {loadingProducts && <Skeleton />}
-        {visibleProducts < products.length && (
+        {visibleProducts < filteredProducts.length && (
           <button
             onClick={showMoreProducts}
             className="products__show-more-button"

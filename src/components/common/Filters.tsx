@@ -22,7 +22,7 @@ const Filters = <T extends string>({
       <p className="filters__title">Filters: </p>
       {items.map((item) =>
         loadingProducts ? (
-          <Skeleton />
+          <Skeleton key={item} />
         ) : (
           <button
             key={item}
