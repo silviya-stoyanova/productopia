@@ -1,6 +1,7 @@
 @import "../../mixins.scss";
 @import "../../colors.scss";
 @import "../../variables.scss";
+@import "../../placeholders.scss";
 
 .cards {
   display: grid;
@@ -33,6 +34,7 @@
     }
 
     &-image {
+      @extend %loading-styles;
       width: 100%;
       height: 100%;
       object-fit: none;

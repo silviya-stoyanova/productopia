@@ -4,7 +4,7 @@
     "category": "Software",
     "name": "Productivity Suite",
     "description": "A comprehensive suite of productivity tools for professionals.",
-    "image": "https://picsum.photos/780/930",
+    "image": "https://picsum.photos/780/930.webp",
     "price": 129.99,
     "features": {
       "operatingSystem": "Windows, macOS",
@@ -17,7 +17,7 @@
     "category": "Software",
     "name": "Photo Editor Pro",
     "description": "Advanced photo editing software with AI tools.",
-    "image": "https://picsum.photos/850/930",
+    "image": "https://picsum.photos/850/930.webp",
     "price": 89.99,
     "features": {
       "operatingSystem": "Windows, macOS",
@@ -30,7 +30,7 @@
     "category": "Software",
     "name": "Security Suite",
     "description": "Top-notch security software for protecting your devices.",
-    "image": "https://picsum.photos/930/930",
+    "image": "https://picsum.photos/930/930.webp",
     "price": 59.99,
     "features": {
       "operatingSystem": "Windows, macOS",
@@ -43,7 +43,7 @@
     "category": "Software",
     "name": "Code Editor X",
     "description": "A powerful code editor with advanced features for developers.",
-    "image": "https://picsum.photos/850/520",
+    "image": "https://picsum.photos/850/520.webp",
     "price": 59.99,
     "features": {
       "operatingSystem": "Windows, macOS, Linux",
@@ -56,7 +56,7 @@
     "category": "Software",
     "name": "Database Manager",
     "description": "Efficient database management software for enterprises.",
-    "image": "https://picsum.photos/1040/500",
+    "image": "https://picsum.photos/1040/500.webp",
     "price": 299.99,
     "features": {
       "operatingSystem": "Windows, Linux",
@@ -69,7 +69,7 @@
     "category": "Software",
     "name": "Project Management",
     "description": "Streamline your projects with advanced management features.",
-    "image": "https://picsum.photos/930/490",
+    "image": "https://picsum.photos/930/490.webp",
     "price": 199.99,
     "features": {
       "operatingSystem": "Windows, macOS, Linux",
@@ -82,7 +82,7 @@
     "category": "Mobile Devices",
     "name": "Smartphone X10",
     "description": "Latest smartphone with cutting-edge features.",
-    "image": "https://picsum.photos/930/500",
+    "image": "https://picsum.photos/930/500.webp",
     "price": 699.99,
     "features": {
       "battery": "4000mAh",
@@ -97,7 +97,7 @@
     "category": "Mobile Devices",
     "name": "Tablet Pro 12",
     "description": "High-performance tablet for professionals.",
-    "image": "https://picsum.photos/1040/930",
+    "image": "https://picsum.photos/1040/930.webp",
     "price": 499.99,
     "features": {
       "battery": "6000mAh",
@@ -112,7 +112,7 @@
     "category": "Mobile Devices",
     "name": "Smartwatch 4",
     "description": "Smartwatch with fitness tracking and notifications.",
-    "image": "https://picsum.photos/780/850",
+    "image": "https://picsum.photos/780/850.webp",
     "price": 299.99,
     "features": {
       "battery": "2 days",
@@ -127,7 +127,7 @@
     "category": "Mobile Devices",
     "name": "Wireless Earbuds",
     "description": "High-quality wireless earbuds with noise cancellation.",
-    "image": "https://picsum.photos/930/850",
+    "image": "https://picsum.photos/930/850.webp",
     "price": 129.99,
     "features": {
       "battery": "8 hours",
@@ -142,7 +142,7 @@
     "category": "Mobile Devices",
     "name": "Portable Charger 20k",
     "description": "High-capacity portable charger with fast charging.",
-    "image": "https://picsum.photos/780/520",
+    "image": "https://picsum.photos/780/520.webp",
     "price": 49.99,
     "features": {
       "battery": "20000mAh",
@@ -157,7 +157,7 @@
     "category": "Mobile Devices",
     "name": "Wireless Charger",
     "description": "Convenient wireless charger for all Qi-enabled devices.",
-    "image": "https://picsum.photos/910/450",
+    "image": "https://picsum.photos/910/450.webp",
     "price": 39.99,
     "features": {
       "battery": "10W",
@@ -172,7 +172,7 @@
     "category": "Fashion",
     "name": "Leather Jacket",
     "description": "Stylish leather jacket perfect for all seasons.",
-    "image": "https://picsum.photos/780/500",
+    "image": "https://picsum.photos/780/500.webp",
     "price": 199.99,
     "features": {
       "size": "M, L, XL",
@@ -185,7 +185,7 @@
     "category": "Fashion",
     "name": "Classic Watch",
     "description": "Elegant watch with a classic design.",
-    "image": "https://picsum.photos/850/500",
+    "image": "https://picsum.photos/850/500.webp",
     "price": 149.99,
     "features": {
       "size": "One Size",
@@ -198,7 +198,7 @@
     "category": "Fashion",
     "name": "Summer Dress",
     "description": "Light and breezy dress for summer outings.",
-    "image": "https://picsum.photos/930/930",
+    "image": "https://picsum.photos/930/930.webp",
     "price": 79.99,
     "features": {
       "size": "S, M, L",
@@ -211,7 +211,7 @@
     "category": "Fashion",
     "name": "Winter Coat",
     "description": "Warm and cozy winter coat for cold weather.",
-    "image": "https://picsum.photos/850/850",
+    "image": "https://picsum.photos/850/850.webp",
     "price": 249.99,
     "features": {
       "size": "S, M, L, XL",
@@ -224,7 +224,7 @@
     "category": "Fashion",
     "name": "Running Shoes",
     "description": "Comfortable running shoes for all types of workouts.",
-    "image": "https://picsum.photos/780/930",
+    "image": "https://picsum.photos/780/930.webp",
     "price": 89.99,
     "features": {
       "size": "8, 9, 10, 11",
@@ -237,7 +237,7 @@
     "category": "Fashion",
     "name": "Graphic T-Shirt",
     "description": "Trendy t-shirt with unique graphic designs.",
-    "image": "https://picsum.photos/930/500",
+    "image": "https://picsum.photos/930/500.webp",
     "price": 24.99,
     "features": {
       "size": "S, M, L, XL",
@@ -250,7 +250,7 @@
     "category": "Fashion",
     "name": "T-Shirt",
     "description": "Comfortable t-shirt for the summer.",
-    "image": "https://picsum.photos/1930/1500",
+    "image": "https://picsum.photos/1930/1500.webp",
     "price": 29.99,
     "features": {
       "size": "S, M, L, XL, XXL",
