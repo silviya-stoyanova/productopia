@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../../assets/styles/components/common/dialog.scss";
 
 interface IDialog {
@@ -8,8 +8,10 @@ interface IDialog {
 
 const Dialog: React.FC<IDialog> = ({ onClose, children }) => {
   const [isClosing, setIsClosing] = useState(false);
+  const dialog = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    dialog.current?.focus();
     document.body.classList.add("body--opened-dialog");
 
     return () => {
@@ -25,18 +27,19 @@ const Dialog: React.FC<IDialog> = ({ onClose, children }) => {
     }, 500);
   };
 
-  //   const handleKeyClose = (e: React.KeyboardEvent<HTMLElement>) => {
-  //     if (e.key === "Escape") {
-  //       startCloseAnimation();
-  //     }
-  //   };
+  const handleKeyClose = (e: React.KeyboardEvent<HTMLElement>) => {
+    if (e.key === "Escape") {
+      startCloseAnimation();
+    }
+  };
 
   return (
     <section
       className={isClosing ? "dialog dialog--closing " : "dialog"}
       onClick={startCloseAnimation}
-      //   onKeyDown={handleKeyClose}
-      //   tabIndex={0}
+      onKeyDown={handleKeyClose}
+      tabIndex={0}
+      ref={dialog}
     >
       <article
         className={

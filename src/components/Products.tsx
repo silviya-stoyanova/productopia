@@ -52,8 +52,8 @@ const Products: React.FC = () => {
             later.
           </p>
         )}
-
         <article className="cards">
+          {/* todo: extract in a separate Cards component */}
           {loadingProducts
             ? Array.from({ length: visibleProducts }).map((value, index) => (
                 <SkeletonCard key={index} />
