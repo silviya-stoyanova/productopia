@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/productopia/static/css/main.f35a9652.css",
-    "main.js": "/productopia/static/js/main.a79ae414.js",
+    "main.js": "/productopia/static/js/main.ebda16dd.js",
     "static/media/product-opia.svg": "/productopia/static/media/product-opia.1b6ed35480480c2eebe5293521abf618.svg",
     "index.html": "/productopia/index.html",
     "main.f35a9652.css.map": "/productopia/static/css/main.f35a9652.css.map",
-    "main.a79ae414.js.map": "/productopia/static/js/main.a79ae414.js.map"
+    "main.ebda16dd.js.map": "/productopia/static/js/main.ebda16dd.js.map"
   },
   "entrypoints": [
     "static/css/main.f35a9652.css",
-    "static/js/main.a79ae414.js"
+    "static/js/main.ebda16dd.js"
   ]
 }
